@@ -11,7 +11,68 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
+.top-nav {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(120, 180, 100, 0.08);
+    margin-bottom: 10px;
+    background: rgba(11, 15, 10, 0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li a {
+    color: #b0c8a8;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.nav-menu li a:hover {
+    color: #d8f0ce;
+    border-bottom-color: rgba(120, 180, 100, 0.3);
+}
+
+.nav-menu li a.active {
+    color: #d8f0ce;
+    border-bottom-color: #7fb873;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 12px;
+    }
+    .nav-menu li a {
+        font-size: 0.85rem;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-menu {
+        gap: 8px;
+    }
+    .nav-menu li a {
+        font-size: 0.75rem;
+        padding: 4px 2px;
+    }
+}
 .container {
     max-width: 1280px;
     margin: 0 auto;
